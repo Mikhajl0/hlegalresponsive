@@ -5,6 +5,7 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
+@import '../font/stylesheet.css';
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -307,10 +308,18 @@ template {
   display: none;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+}
+
 @font-face {
   font-family: "icomoon";
-  src: url("fonts/icomoon.eot?yqn9f6");
-  src: url("fonts/icomoon.eot?yqn9f6#iefix") format("embedded-opentype"), url("fonts/icomoon.ttf?yqn9f6") format("truetype"), url("../fonts/icomoon.woff?yqn9f6") format("woff"), url("fonts/icomoon.svg?yqn9f6#icomoon") format("svg");
+  src: url("../fonts/icomoon.eot?9j6clo");
+  src: url("../fonts/icomoon.eot?9j6clo#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?9j6clo") format("truetype"), url("../fonts/icomoon.woff?9j6clo") format("woff"), url("../fonts/icomoon.svg?9j6clo#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -349,27 +358,135 @@ template {
   content: "\e907";
 }
 
-.icon-ecommerce .path1:before {
+.icon-basket .path1:before {
   content: "\e900";
-  color: rgb(0, 0, 0);
+  color: #F0145A;
 }
 
-.icon-ecommerce .path2:before {
+.icon-basket .path2:before {
   content: "\e901";
-  margin-left: -1em;
-  color: rgb(0, 0, 0);
+  margin-left: -1.5em;
+  color: #F0145A;
 }
 
-.icon-ecommerce .path3:before {
+.icon-basket .path3:before {
   content: "\e902";
-  margin-left: -1em;
+  margin-left: -1.5em;
   color: rgb(255, 255, 255);
 }
 
-.services-a {
+.wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  width: 315px;
+}
+
+.cards-inner {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-link {
+  font-size: 14px;
+  line-height: 17px;
   text-decoration: none;
-  font-size: 150px;
+  color: #24A3FF;
   font-weight: 700;
+}
+.services-link:hover {
+  color: #F0145A;
+}
+.services-title {
+  font-size: 30px;
+  line-height: 36px;
+  background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.cards {
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+  border-radius: 0 0 12px 12px;
+}
+.cards-div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 315px;
+}
+.cards-icon {
+  display: inline-block;
+  font-size: 64px;
+  color: #F0145A;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  padding: 14px;
+  height: 92px;
+  width: 92px;
+  margin-bottom: 30px;
+}
+.cards-link {
+  font-size: 22px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #24A3FF;
+  font-weight: 700;
+}
+.cards-text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+  margin-top: 15px;
+  margin-bottom: 0;
+}
+
+.services-link:hover .services-icon path {
+  stroke: #F0145A;
+}
+
+@media (min-width: 768px) {
+  .wrapper {
+    width: 648px;
+  }
+  .cards-inner {
+    flex-direction: row;
+    gap: 60px;
+  }
+  .cards-div {
+    width: 294px;
+  }
+  .cards-link {
+    display: block;
+    vertical-align: top;
+  }
+}
+@media (min-width: 1024px) {
+  .wrapper {
+    width: 904px;
+  }
+  .cards-div {
+    width: 261px;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    width: 1320px;
+  }
+  .cards-div {
+    width: 400px;
+  }
+}
+@media (min-width: 1920px) {
+  .wrapper {
+    width: 1600px;
+  }
+  .cards-div {
+    width: 493px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
