@@ -461,7 +461,6 @@ body {
   }
   .cards-link {
     display: block;
-    vertical-align: top;
   }
 }
 @media (min-width: 1024px) {
@@ -486,6 +485,83 @@ body {
   }
   .cards-div {
     width: 493px;
+  }
+}
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.partners-bloc {
+  height: 120px;
+}
+.partners-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.partners-hillel {
+  background-color: #1C4280;
+}
+.partners-wanna {
+  background-color: #143646;
+}
+.partners-tapgerine {
+  background-color: #F48B30;
+}
+.partners-look {
+  background-color: #9E4DC3;
+}
+.partners-orangear {
+  background-color: #FD9339;
+}
+.partners-adtelligent {
+  background-color: #E2E2E4;
+}
+.partners-clickky {
+  background-color: #C71C36;
+}
+.partners-ecolease {
+  background-color: #DCF3F9;
+}
+.partners-infa {
+  background-color: #EAEAEA;
+}
+.partners-siti {
+  background-color: #282240;
+}
+.partners-art {
+  background-color: #1D4568;
+}
+.partners-card {
+  background-color: #000000;
+}
+
+@media (max-width: 768px) {
+  .partners-bloc:nth-child(n+7) {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .partners {
+    flex-direction: row;
+  }
+  .partners-bloc {
+    width: 33%;
+  }
+}
+@media (min-width: 1024px) {
+  .partners-bloc {
+    width: 25%;
+  }
+}
+@media (min-width: 1920px) {
+  .partners {
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    overflow: hidden;
   }
 }
 

@@ -1,0 +1,90 @@
+@mixin filling ($bgc) {
+    background-color: $bgc;
+}
+
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+
+    &-bloc {
+        height: 120px;
+    }
+
+    &-link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%; 
+    }
+
+    &-hillel {
+        @include filling(#1C4280);
+    }
+
+    &-wanna {
+        @include filling(#143646);
+    }
+
+    &-tapgerine {
+        @include filling(#F48B30);
+    }
+    &-look {
+        @include filling(#9E4DC3);
+    }
+    &-orangear {
+        @include filling(#FD9339);
+    }
+    &-adtelligent {
+        @include filling(#E2E2E4);
+    }
+    &-clickky {
+        @include filling(#C71C36);
+    }
+    &-ecolease {
+        @include filling(#DCF3F9);
+    }
+    &-infa {
+        @include filling(#EAEAEA);
+    }
+    &-siti {
+        @include filling(#282240);
+    }
+    &-art {
+        @include filling(#1D4568);
+    }
+    &-card {
+        @include filling(#000000);
+    }
+}
+
+@media (max-width: 768px) {
+    .partners-bloc:nth-child(n + 7) {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .partners {
+        flex-direction: row;
+    }
+
+    .partners-bloc {
+        width: 33%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .partners-bloc {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1920px) {
+    .partners {
+       margin-left: 100px;
+       margin-right: 100px;
+       border-radius: 20px;
+       overflow: hidden;
+    }
+}
