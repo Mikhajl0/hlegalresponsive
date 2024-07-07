@@ -131,7 +131,13 @@
 }
 
 @media (min-width: 1920px) {
-        .wrapper {
+
+    .cards {
+        width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+    }    
+    .wrapper {
         width: 1600px;
     }
 
