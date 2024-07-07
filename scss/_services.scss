@@ -33,6 +33,13 @@
     border-radius: 0 0 12px 12px;
 }
 
+@mixin content {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 10px; 
+}
+
 .cards-inner {
     @include flex-box;
     gap: 30px;
@@ -86,6 +93,38 @@
         margin-top: 15px;
         margin-bottom: 0;
     }
+}
+
+.line-container {
+    position: relative;
+    height: 20px;
+}
+
+.line-container::before,
+.line-container::after {
+    // content: '';
+    // position: absolute;
+    // left: 0;
+    // height: 10px; 
+    @include content;
+}
+
+.line-container::before {
+    top: 0px;
+    background-color: #CACADB;
+    border-radius: 0 0 12px 12px;
+    margin-left: 20px;
+    margin-right: 20px; 
+    width: calc(100% - 40px);
+}
+
+.line-container::after {
+    bottom: 0;
+    background-color: #E7E7F2;
+    border-radius: 0 0 12px 12px;
+    width: calc(100% - 80px);
+    margin-left: 40px;
+    margin-right: 40px; 
 }
 .services-link:hover .services-icon path {
     stroke: #F0145A;
