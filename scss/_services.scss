@@ -66,8 +66,11 @@
 }
 
 .cards {
-    background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
-    @include radius;
+    &-back-color {
+        background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+        @include radius;
+        padding-bottom: 60px;
+    }
 
     &-div {
         @include flex-box;
@@ -102,10 +105,6 @@
 
 .line-container::before,
 .line-container::after {
-    // content: '';
-    // position: absolute;
-    // left: 0;
-    // height: 10px; 
     @include content;
 }
 
